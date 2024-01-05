@@ -31,6 +31,30 @@ JNIEXPORT void JNICALL Java_de_lojaw_jni_KeyboardInputHandler_pressKey
 JNIEXPORT void JNICALL Java_de_lojaw_jni_KeyboardInputHandler_releaseKey
   (JNIEnv *, jobject, jchar);
 
+/*
+ * Class:     de_lojaw_jni_KeyboardInputHandler
+ * Method:    moveMouse
+ * Signature: (IIZ)V
+ */
+JNIEXPORT void JNICALL Java_de_lojaw_jni_KeyboardInputHandler_moveMouse
+  (JNIEnv *, jobject, jint, jint, jboolean);
+
+/*
+ * Class:     de_lojaw_jni_KeyboardInputHandler
+ * Method:    getMousePosition
+ * Signature: ()[I
+ */
+JNIEXPORT jintArray JNICALL Java_de_lojaw_jni_KeyboardInputHandler_getMousePosition
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     de_lojaw_jni_KeyboardInputHandler
+ * Method:    mouseClick
+ * Signature: (II)V
+ */
+JNIEXPORT void JNICALL Java_de_lojaw_jni_KeyboardInputHandler_mouseClick
+  (JNIEnv *, jobject, jint, jint);
+
 #ifdef __cplusplus
 }
 #endif
